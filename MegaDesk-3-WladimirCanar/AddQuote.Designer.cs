@@ -28,17 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.RichTextBox();
+            this.textBoxSizeDesk = new System.Windows.Forms.RichTextBox();
+            this.textBoxNumberDrawers = new System.Windows.Forms.RichTextBox();
+            this.comboSurfaceMaterials = new System.Windows.Forms.ComboBox();
+            this.comboRushOrder = new System.Windows.Forms.ComboBox();
+            this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnExit
@@ -75,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(206, 133);
+            this.label3.Location = new System.Drawing.Point(206, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 25);
             this.label3.TabIndex = 7;
@@ -85,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(206, 173);
+            this.label4.Location = new System.Drawing.Point(206, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 25);
             this.label4.TabIndex = 8;
@@ -95,62 +101,99 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(206, 214);
+            this.label5.Location = new System.Drawing.Point(206, 280);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Rush order:";
             // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(394, 54);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(175, 23);
+            this.textBoxName.TabIndex = 10;
+            this.textBoxName.Text = "";
+            // 
+            // textBoxSizeDesk
+            // 
+            this.textBoxSizeDesk.Location = new System.Drawing.Point(435, 130);
+            this.textBoxSizeDesk.Name = "textBoxSizeDesk";
+            this.textBoxSizeDesk.Size = new System.Drawing.Size(134, 23);
+            this.textBoxSizeDesk.TabIndex = 11;
+            this.textBoxSizeDesk.Text = "";
+            this.textBoxSizeDesk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSizeDesk_KeyPress);
+            // 
+            // textBoxNumberDrawers
+            // 
+            this.textBoxNumberDrawers.Location = new System.Drawing.Point(435, 205);
+            this.textBoxNumberDrawers.Name = "textBoxNumberDrawers";
+            this.textBoxNumberDrawers.Size = new System.Drawing.Size(134, 23);
+            this.textBoxNumberDrawers.TabIndex = 12;
+            this.textBoxNumberDrawers.Text = "";
+            // 
+            // comboSurfaceMaterials
+            // 
+            this.comboSurfaceMaterials.FormattingEnabled = true;
+            this.comboSurfaceMaterials.Location = new System.Drawing.Point(435, 242);
+            this.comboSurfaceMaterials.Name = "comboSurfaceMaterials";
+            this.comboSurfaceMaterials.Size = new System.Drawing.Size(134, 21);
+            this.comboSurfaceMaterials.TabIndex = 13;
+            // 
+            // comboRushOrder
+            // 
+            this.comboRushOrder.FormattingEnabled = true;
+            this.comboRushOrder.Location = new System.Drawing.Point(435, 280);
+            this.comboRushOrder.Name = "comboRushOrder";
+            this.comboRushOrder.Size = new System.Drawing.Size(134, 21);
+            this.comboRushOrder.TabIndex = 14;
+            // 
+            // deskBindingSource
+            // 
+            this.deskBindingSource.DataSource = typeof(MegaDesk_3_WladimirCanar.Desk);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(240, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 25);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Width:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(394, 54);
+            this.richTextBox1.Location = new System.Drawing.Point(435, 159);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(175, 23);
-            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Size = new System.Drawing.Size(134, 23);
+            this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
             // 
-            // richTextBox2
+            // label7
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(435, 95);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(134, 23);
-            this.richTextBox2.TabIndex = 11;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(435, 139);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(134, 23);
-            this.richTextBox3.TabIndex = 12;
-            this.richTextBox3.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(435, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 21);
-            this.comboBox1.TabIndex = 13;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(435, 214);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(134, 21);
-            this.comboBox2.TabIndex = 14;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(240, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 25);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Depth:";
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboRushOrder);
+            this.Controls.Add(this.comboSurfaceMaterials);
+            this.Controls.Add(this.textBoxNumberDrawers);
+            this.Controls.Add(this.textBoxSizeDesk);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,6 +202,7 @@
             this.Controls.Add(this.BtnExit);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,10 +216,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox textBoxName;
+        private System.Windows.Forms.RichTextBox textBoxSizeDesk;
+        private System.Windows.Forms.RichTextBox textBoxNumberDrawers;
+        private System.Windows.Forms.ComboBox comboSurfaceMaterials;
+        private System.Windows.Forms.ComboBox comboRushOrder;
+        private System.Windows.Forms.BindingSource deskBindingSource;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label7;
     }
 }

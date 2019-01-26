@@ -24,5 +24,20 @@ namespace MegaDesk_3_WladimirCanar
             addMainMenuForm.Show(this);
             Hide();
         }
+
+        private void textBoxSizeDesk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                    e.Handled = true;
+                
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
