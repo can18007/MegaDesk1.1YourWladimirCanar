@@ -27,7 +27,7 @@ namespace MegaDesk_3_WladimirCanar
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void BtnViewQuote_Click(object sender, EventArgs e)

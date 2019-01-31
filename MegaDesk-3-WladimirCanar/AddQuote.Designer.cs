@@ -36,13 +36,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.RichTextBox();
-            this.textBoxSizeDesk = new System.Windows.Forms.RichTextBox();
+            this.textBoxSizeDeskWidth = new System.Windows.Forms.RichTextBox();
             this.textBoxNumberDrawers = new System.Windows.Forms.RichTextBox();
             this.comboSurfaceMaterials = new System.Windows.Forms.ComboBox();
             this.comboRushOrder = new System.Windows.Forms.ComboBox();
             this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBoxSizeDeskDepth = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -115,14 +115,14 @@
             this.textBoxName.TabIndex = 10;
             this.textBoxName.Text = "";
             // 
-            // textBoxSizeDesk
+            // textBoxSizeDeskWidth
             // 
-            this.textBoxSizeDesk.Location = new System.Drawing.Point(435, 130);
-            this.textBoxSizeDesk.Name = "textBoxSizeDesk";
-            this.textBoxSizeDesk.Size = new System.Drawing.Size(134, 23);
-            this.textBoxSizeDesk.TabIndex = 11;
-            this.textBoxSizeDesk.Text = "";
-            this.textBoxSizeDesk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSizeDesk_KeyPress);
+            this.textBoxSizeDeskWidth.Location = new System.Drawing.Point(435, 130);
+            this.textBoxSizeDeskWidth.Name = "textBoxSizeDeskWidth";
+            this.textBoxSizeDeskWidth.Size = new System.Drawing.Size(134, 23);
+            this.textBoxSizeDeskWidth.TabIndex = 11;
+            this.textBoxSizeDeskWidth.Text = "";
+            this.textBoxSizeDeskWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSizeDesk_KeyPress);
             // 
             // textBoxNumberDrawers
             // 
@@ -163,13 +163,15 @@
             this.label6.Text = "Width:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // richTextBox1
+            // textBoxSizeDeskDepth
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(435, 159);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(134, 23);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.textBoxSizeDeskDepth.Location = new System.Drawing.Point(435, 159);
+            this.textBoxSizeDeskDepth.Name = "textBoxSizeDeskDepth";
+            this.textBoxSizeDeskDepth.Size = new System.Drawing.Size(134, 23);
+            this.textBoxSizeDeskDepth.TabIndex = 16;
+            this.textBoxSizeDeskDepth.Text = "";
+            this.textBoxSizeDeskDepth.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxSizeDeskDepth_Validating);
+            this.textBoxSizeDeskDepth.Validated += new System.EventHandler(this.textBoxSizeDeskDepth_Validated);
             // 
             // label7
             // 
@@ -187,12 +189,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.textBoxSizeDeskDepth);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboRushOrder);
             this.Controls.Add(this.comboSurfaceMaterials);
             this.Controls.Add(this.textBoxNumberDrawers);
-            this.Controls.Add(this.textBoxSizeDesk);
+            this.Controls.Add(this.textBoxSizeDeskWidth);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -217,13 +219,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox textBoxName;
-        private System.Windows.Forms.RichTextBox textBoxSizeDesk;
+        private System.Windows.Forms.RichTextBox textBoxSizeDeskWidth;
         private System.Windows.Forms.RichTextBox textBoxNumberDrawers;
         private System.Windows.Forms.ComboBox comboSurfaceMaterials;
         private System.Windows.Forms.ComboBox comboRushOrder;
         private System.Windows.Forms.BindingSource deskBindingSource;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox textBoxSizeDeskDepth;
         private System.Windows.Forms.Label label7;
     }
 }

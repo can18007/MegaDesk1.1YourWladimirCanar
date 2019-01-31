@@ -39,5 +39,48 @@ namespace MegaDesk_3_WladimirCanar
         {
 
         }
-    }
+
+        private void textBoxSizeDeskDepth_Validated(object sender, EventArgs e)
+        {
+            // If all conditions have been met, clear the ErrorProvider of errors.
+            //errorProvider1.SetError(textBoxSizeDeskDepth, "");
+        }
+
+        private void textBoxSizeDeskDepth_Validating(object sender, CancelEventArgs e)
+        {
+            string errorMsg;
+            if (!ValidDepth(textBoxSizeDeskDepth.Text, out errorMsg))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                textBoxSizeDeskDepth.Select(0, textBoxSizeDeskDepth.Text.Length);
+
+                // Set the ErrorProvider error with the text to display. 
+                //this.errorProvider1.SetError(textBox1, errorMsg);
+            }
+        }
+
+        public bool ValidDepth(string depth, out string errorMessage)
+        {
+            // Confirm that the deoth string is not empty.
+            if(depth.Length == 0)
+            {
+                errorMessage = "Enter depth value min 12 max 48";
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+
+            // Confirm the value is min 12 max 48r.
+            int x = Convert.ToInt32(depth);
+
+            if (x > 11 || x < 49)
+            {
+                        errorMessage = "";
+                        return true;
+            } else  
+                errorMessage = "Enter depth value min 12 max 48";
+                MessageBox.Show(errorMessage);
+                return false;
+            }
+        }
 }
