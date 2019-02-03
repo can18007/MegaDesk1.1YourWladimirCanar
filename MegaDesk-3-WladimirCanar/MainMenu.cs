@@ -46,5 +46,10 @@ namespace MegaDesk_3_WladimirCanar
             Hide();
 
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

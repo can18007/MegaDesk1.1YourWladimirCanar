@@ -112,6 +112,7 @@
             this.Controls.Add(this.BtnAddQuote);
             this.Name = "MainMenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

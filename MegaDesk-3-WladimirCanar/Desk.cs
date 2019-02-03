@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_3_WladimirCanar
 {
-    class Desk
+    public class Desk
     {
+        public string Name { get; set; }
         public int Width { get; set; }
         public int Depth { get; set; }
         public int NumberOfDrawers { get; set; }
-        public string DesktopMaterial { get; set; }
-
-        //constants
-        public const int MINWIDTH = 24;
-        public const int MAXWIDTH = 96;
-
+        public AddQuote.Materials DesktopMaterial { get; set; }
+        public AddQuote.rush Rush { get; set;}
     }
 }

@@ -24,7 +24,7 @@ namespace MegaDesk_3_WladimirCanar
         private const int SIZE_THRESHOLD = 1000;
         private const int PRICE_PER_DRAWER = 50;
 
-        public DeskQuote(int width, int depth, int drawers, string material, int rushDays)
+        public DeskQuote(int width, int depth, int drawers, AddQuote.Materials material, int rushDays)
         {
             //code here
             Desk.Width = width;
